@@ -1,0 +1,61 @@
+drivers/lptmr/lptmr_counter.o: ../drivers/lptmr/lptmr_counter.c \
+ ../drivers/lptmr/lptmr.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/common.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/cpu/arm_cm4.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/platforms/k60_tower.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/drivers/mcg/mcg.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/cpu/headers/MK60N512VMD100.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ansi_parms.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewlGlobals.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/ansi_prefix.ARM.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/os_enum.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_lib_ext1.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cassert \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/io.h \
+ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/stdlib.h
+
+../drivers/lptmr/lptmr.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/common.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/cpu/arm_cm4.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/platforms/k60_tower.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/drivers/mcg/mcg.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/cpu/headers/MK60N512VMD100.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ansi_parms.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewlGlobals.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/ansi_prefix.ARM.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/os_enum.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_lib_ext1.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/cassert:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/io.h:
+
+C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/stdlib.h:

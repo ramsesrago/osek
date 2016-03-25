@@ -1,0 +1,12 @@
+Project_Settings/Linker_Files/MK60N512VMD100_ram.lcf
+Project_Settings/Linker_Files/MK60N512VMD100_flash.lcf
+Project_Settings/Debugger/MK60N512VMD100.mem
+Project_Settings/Startup_Code/kinetis_sysinit.h
+Project_Settings/Startup_Code/kinetis_sysinit.c
+Project_Settings/Debugger/init_kinetis.tcl
+Project_Settings/Debugger/mass_erase_kinetis.tcl
+Project_Headers/derivative.h
+Project_Headers/MK60N512VMD100.hgpio_MK60N512VMD100_INTERNAL_FLASH_PnE_OSJTAG_Target.rse.xml
+gpio_MK60N512VMD100_INTERNAL_RAM_PnE_OSJTAG_Target.rse.xml
+gpio_MK60N512VMD100_INTERNAL_FLASH_PnE_OSJTAG.rse.xml
+gpio_MK60N512VMD100_INTERNAL_RAM_PnE_OSJTAG.rse.xml

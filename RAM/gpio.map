@@ -1,0 +1,1316 @@
+Archive member included because of file (symbol)
+
+C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+                              ./Project_Settings/Startup_Code/__arm_start.o (exit)
+C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+                              (__pformatter_)
+C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+                              C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o) (memchr)
+C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+                              C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o) (strchr)
+C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+                              ./Project_Settings/Startup_Code/__arm_start.o (__init_cpp)
+C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+                              ./Project_Settings/Startup_Code/__arm_start.o (__copy_rom_sections_to_ram)
+C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+                              C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o) (__destroy_global_chain)
+
+Allocating common symbols
+Common symbol       size              file
+
+core_clk_mhz        0x4               ./cpu/sysinit.o
+core_clk_khz        0x4               ./cpu/sysinit.o
+periph_clk_khz      0x4               ./cpu/sysinit.o
+LPTMR_INTERRUPT     0x1               ./drivers/lptmr/lptmr_interrupt.o
+
+Discarded input sections
+
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .data          0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .bss           0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_start.o
+ .data          0x00000000        0x0 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000      0x7fc ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000       0x16 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000       0x58 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000      0x1b5 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000      0x147 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000       0x10 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000       0x9d ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00000000      0x1a1 ./Project_Settings/Startup_Code/__arm_start.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/__arm_end.o
+ .data          0x00000000        0x0 ./Project_Settings/Startup_Code/__arm_end.o
+ .bss           0x00000000        0x0 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000      0x7fc ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000       0x16 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000       0x58 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000      0x1b5 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000      0x147 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000       0x16 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000       0x10 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x00000000       0x16 ./Project_Settings/Startup_Code/__arm_end.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/scheduler.o
+ .data          0x00000000        0x0 ./Sources/scheduler.o
+ .debug_macro   0x00000000      0x7fc ./Sources/scheduler.o
+ .debug_macro   0x00000000       0x10 ./Sources/scheduler.o
+ .debug_macro   0x00000000       0x16 ./Sources/scheduler.o
+ .debug_macro   0x00000000       0x58 ./Sources/scheduler.o
+ .debug_macro   0x00000000      0x1b5 ./Sources/scheduler.o
+ .debug_macro   0x00000000      0x147 ./Sources/scheduler.o
+ .debug_macro   0x00000000       0x9d ./Sources/scheduler.o
+ .debug_macro   0x00000000       0x10 ./Sources/scheduler.o
+ .debug_macro   0x00000000      0x1a1 ./Sources/scheduler.o
+ .debug_macro   0x00000000     0xf34a ./Sources/scheduler.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./Sources/gpio_k60.o
+ .bss           0x00000000        0x0 ./Sources/gpio_k60.o
+ .rodata        0x00000000        0xc ./Sources/gpio_k60.o
+ .debug_macro   0x00000000      0x7fc ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x16 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x34 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x3a ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x10 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x16 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x58 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000      0x1b5 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000      0x147 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x9d ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x10 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000      0x1a1 ./Sources/gpio_k60.o
+ .debug_macro   0x00000000     0xf34a ./Sources/gpio_k60.o
+ .debug_macro   0x00000000       0x10 ./Sources/gpio_k60.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .group         0x00000000        0x8 ./common/uif.o
+ .text          0x00000000      0x674 ./common/uif.o
+ .data          0x00000000        0x0 ./common/uif.o
+ .bss           0x00000000       0xa0 ./common/uif.o
+ .rodata        0x00000000       0xd4 ./common/uif.o
+ .rodata.str1.4
+                0x00000000       0x44 ./common/uif.o
+ .debug_info    0x00000000      0xaf7 ./common/uif.o
+ .debug_abbrev  0x00000000      0x239 ./common/uif.o
+ .debug_loc     0x00000000      0x575 ./common/uif.o
+ .debug_aranges
+                0x00000000       0x20 ./common/uif.o
+ .debug_ranges  0x00000000       0x18 ./common/uif.o
+ .debug_macro   0x00000000       0xf9 ./common/uif.o
+ .debug_macro   0x00000000      0x7fc ./common/uif.o
+ .debug_macro   0x00000000       0x16 ./common/uif.o
+ .debug_macro   0x00000000       0x34 ./common/uif.o
+ .debug_macro   0x00000000       0x3a ./common/uif.o
+ .debug_macro   0x00000000       0x10 ./common/uif.o
+ .debug_macro   0x00000000       0x16 ./common/uif.o
+ .debug_macro   0x00000000       0x58 ./common/uif.o
+ .debug_macro   0x00000000      0x1b5 ./common/uif.o
+ .debug_macro   0x00000000      0x147 ./common/uif.o
+ .debug_macro   0x00000000       0x9d ./common/uif.o
+ .debug_macro   0x00000000       0x10 ./common/uif.o
+ .debug_macro   0x00000000      0x1a1 ./common/uif.o
+ .debug_macro   0x00000000     0xf34a ./common/uif.o
+ .debug_macro   0x00000000       0x10 ./common/uif.o
+ .debug_macro   0x00000000       0x40 ./common/uif.o
+ .debug_line    0x00000000      0x4c4 ./common/uif.o
+ .debug_str     0x00000000    0x5507e ./common/uif.o
+ .comment       0x00000000       0x7a ./common/uif.o
+ .ARM.attributes
+                0x00000000       0x33 ./common/uif.o
+ .debug_frame   0x00000000       0xfc ./common/uif.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/stdlib.o
+ .data          0x00000000        0x0 ./common/stdlib.o
+ .bss           0x00000000        0x0 ./common/stdlib.o
+ .debug_macro   0x00000000      0x7fc ./common/stdlib.o
+ .debug_macro   0x00000000       0x16 ./common/stdlib.o
+ .debug_macro   0x00000000       0x34 ./common/stdlib.o
+ .debug_macro   0x00000000       0x3a ./common/stdlib.o
+ .debug_macro   0x00000000       0x10 ./common/stdlib.o
+ .debug_macro   0x00000000       0x16 ./common/stdlib.o
+ .debug_macro   0x00000000       0x58 ./common/stdlib.o
+ .debug_macro   0x00000000      0x1b5 ./common/stdlib.o
+ .debug_macro   0x00000000      0x147 ./common/stdlib.o
+ .debug_macro   0x00000000       0x9d ./common/stdlib.o
+ .debug_macro   0x00000000       0x10 ./common/stdlib.o
+ .debug_macro   0x00000000      0x1a1 ./common/stdlib.o
+ .debug_macro   0x00000000     0xf34a ./common/stdlib.o
+ .debug_macro   0x00000000       0x10 ./common/stdlib.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .group         0x00000000        0x8 ./common/printf.o
+ .data          0x00000000        0x0 ./common/printf.o
+ .bss           0x00000000        0x0 ./common/printf.o
+ .debug_macro   0x00000000      0x7fc ./common/printf.o
+ .debug_macro   0x00000000       0x16 ./common/printf.o
+ .debug_macro   0x00000000       0x34 ./common/printf.o
+ .debug_macro   0x00000000       0x3a ./common/printf.o
+ .debug_macro   0x00000000       0x10 ./common/printf.o
+ .debug_macro   0x00000000       0x16 ./common/printf.o
+ .debug_macro   0x00000000       0x58 ./common/printf.o
+ .debug_macro   0x00000000      0x1b5 ./common/printf.o
+ .debug_macro   0x00000000      0x147 ./common/printf.o
+ .debug_macro   0x00000000       0x9d ./common/printf.o
+ .debug_macro   0x00000000       0x10 ./common/printf.o
+ .debug_macro   0x00000000      0x1a1 ./common/printf.o
+ .debug_macro   0x00000000     0xf34a ./common/printf.o
+ .debug_macro   0x00000000       0x10 ./common/printf.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .group         0x00000000        0x8 ./common/io.o
+ .data          0x00000000        0x0 ./common/io.o
+ .bss           0x00000000        0x0 ./common/io.o
+ .debug_macro   0x00000000      0x7fc ./common/io.o
+ .debug_macro   0x00000000       0x16 ./common/io.o
+ .debug_macro   0x00000000       0x34 ./common/io.o
+ .debug_macro   0x00000000       0x3a ./common/io.o
+ .debug_macro   0x00000000       0x10 ./common/io.o
+ .debug_macro   0x00000000       0x16 ./common/io.o
+ .debug_macro   0x00000000       0x58 ./common/io.o
+ .debug_macro   0x00000000      0x1b5 ./common/io.o
+ .debug_macro   0x00000000      0x147 ./common/io.o
+ .debug_macro   0x00000000       0x9d ./common/io.o
+ .debug_macro   0x00000000       0x10 ./common/io.o
+ .debug_macro   0x00000000      0x1a1 ./common/io.o
+ .debug_macro   0x00000000     0xf34a ./common/io.o
+ .debug_macro   0x00000000       0x10 ./common/io.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/sysinit.o
+ .data          0x00000000        0x0 ./cpu/sysinit.o
+ .bss           0x00000000        0x0 ./cpu/sysinit.o
+ .debug_macro   0x00000000      0x7fc ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x16 ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x34 ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x3a ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x10 ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x16 ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x58 ./cpu/sysinit.o
+ .debug_macro   0x00000000      0x1b5 ./cpu/sysinit.o
+ .debug_macro   0x00000000      0x147 ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x9d ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x10 ./cpu/sysinit.o
+ .debug_macro   0x00000000      0x1a1 ./cpu/sysinit.o
+ .debug_macro   0x00000000     0xf34a ./cpu/sysinit.o
+ .debug_macro   0x00000000       0x10 ./cpu/sysinit.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./cpu/arm_cm4.o
+ .data          0x00000000        0x0 ./cpu/arm_cm4.o
+ .bss           0x00000000        0x0 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000      0x7fc ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x16 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x34 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x3a ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x10 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x16 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x58 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000      0x1b5 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000      0x147 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x9d ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x10 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000      0x1a1 ./cpu/arm_cm4.o
+ .debug_macro   0x00000000     0xf34a ./cpu/arm_cm4.o
+ .debug_macro   0x00000000       0x10 ./cpu/arm_cm4.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/adc16/adc16.o
+ .text          0x00000000      0x108 ./drivers/adc16/adc16.o
+ .data          0x00000000        0x0 ./drivers/adc16/adc16.o
+ .bss           0x00000000        0x0 ./drivers/adc16/adc16.o
+ .debug_info    0x00000000      0x4b6 ./drivers/adc16/adc16.o
+ .debug_abbrev  0x00000000      0x135 ./drivers/adc16/adc16.o
+ .debug_loc     0x00000000      0x116 ./drivers/adc16/adc16.o
+ .debug_aranges
+                0x00000000       0x20 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0xf9 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000      0x7fc ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x16 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x34 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x3a ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x10 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x16 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x58 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000      0x147 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x9d ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x10 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000     0xf34a ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000       0x10 ./drivers/adc16/adc16.o
+ .debug_macro   0x00000000      0x1f8 ./drivers/adc16/adc16.o
+ .debug_line    0x00000000      0x3d3 ./drivers/adc16/adc16.o
+ .debug_str     0x00000000    0x55498 ./drivers/adc16/adc16.o
+ .comment       0x00000000       0x7a ./drivers/adc16/adc16.o
+ .ARM.attributes
+                0x00000000       0x33 ./drivers/adc16/adc16.o
+ .debug_frame   0x00000000       0x40 ./drivers/adc16/adc16.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_pulse.o
+ .text          0x00000000      0x1b4 ./drivers/lptmr/lptmr_pulse.o
+ .data          0x00000000        0x0 ./drivers/lptmr/lptmr_pulse.o
+ .bss           0x00000000        0x0 ./drivers/lptmr/lptmr_pulse.o
+ .rodata.str1.4
+                0x00000000      0x3a8 ./drivers/lptmr/lptmr_pulse.o
+ .debug_info    0x00000000      0x655 ./drivers/lptmr/lptmr_pulse.o
+ .debug_abbrev  0x00000000      0x170 ./drivers/lptmr/lptmr_pulse.o
+ .debug_loc     0x00000000       0x5f ./drivers/lptmr/lptmr_pulse.o
+ .debug_aranges
+                0x00000000       0x20 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0xff ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000      0x7fc ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x34 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x3a ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x58 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000      0x147 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x9d ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000     0xf34a ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_pulse.o
+ .debug_macro   0x00000000       0x28 ./drivers/lptmr/lptmr_pulse.o
+ .debug_line    0x00000000      0x3c7 ./drivers/lptmr/lptmr_pulse.o
+ .debug_str     0x00000000    0x54f4d ./drivers/lptmr/lptmr_pulse.o
+ .comment       0x00000000       0x7a ./drivers/lptmr/lptmr_pulse.o
+ .ARM.attributes
+                0x00000000       0x33 ./drivers/lptmr/lptmr_pulse.o
+ .debug_frame   0x00000000       0x2c ./drivers/lptmr/lptmr_pulse.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_interrupt.o
+ .data          0x00000000        0x0 ./drivers/lptmr/lptmr_interrupt.o
+ .bss           0x00000000        0x0 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000      0x7fc ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x34 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x3a ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x58 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000      0x147 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x9d ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000     0xf34a ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00000000       0x28 ./drivers/lptmr/lptmr_interrupt.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_counter.o
+ .text          0x00000000       0x80 ./drivers/lptmr/lptmr_counter.o
+ .data          0x00000000        0x0 ./drivers/lptmr/lptmr_counter.o
+ .bss           0x00000000        0x0 ./drivers/lptmr/lptmr_counter.o
+ .rodata.str1.4
+                0x00000000       0xe0 ./drivers/lptmr/lptmr_counter.o
+ .debug_info    0x00000000      0x1b7 ./drivers/lptmr/lptmr_counter.o
+ .debug_abbrev  0x00000000      0x104 ./drivers/lptmr/lptmr_counter.o
+ .debug_loc     0x00000000       0x20 ./drivers/lptmr/lptmr_counter.o
+ .debug_aranges
+                0x00000000       0x20 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0xff ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000      0x7fc ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x34 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x3a ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x58 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000      0x147 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x9d ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000     0xf34a ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_counter.o
+ .debug_macro   0x00000000       0x28 ./drivers/lptmr/lptmr_counter.o
+ .debug_line    0x00000000      0x3a6 ./drivers/lptmr/lptmr_counter.o
+ .debug_str     0x00000000    0x54e22 ./drivers/lptmr/lptmr_counter.o
+ .comment       0x00000000       0x7a ./drivers/lptmr/lptmr_counter.o
+ .ARM.attributes
+                0x00000000       0x33 ./drivers/lptmr/lptmr_counter.o
+ .debug_frame   0x00000000       0x2c ./drivers/lptmr/lptmr_counter.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/lptmr/lptmr_clocksource.o
+ .text          0x00000000      0x2d0 ./drivers/lptmr/lptmr_clocksource.o
+ .data          0x00000000        0x0 ./drivers/lptmr/lptmr_clocksource.o
+ .bss           0x00000000        0x0 ./drivers/lptmr/lptmr_clocksource.o
+ .rodata.str1.4
+                0x00000000      0x334 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_info    0x00000000      0x8dc ./drivers/lptmr/lptmr_clocksource.o
+ .debug_abbrev  0x00000000      0x150 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_loc     0x00000000       0x80 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_aranges
+                0x00000000       0x20 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0xff ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000      0x7fc ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x34 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x3a ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x16 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x58 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000      0x147 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x9d ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000     0xf34a ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x10 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_macro   0x00000000       0x28 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_line    0x00000000      0x406 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_str     0x00000000    0x54f9e ./drivers/lptmr/lptmr_clocksource.o
+ .comment       0x00000000       0x7a ./drivers/lptmr/lptmr_clocksource.o
+ .ARM.attributes
+                0x00000000       0x33 ./drivers/lptmr/lptmr_clocksource.o
+ .debug_frame   0x00000000       0x70 ./drivers/lptmr/lptmr_clocksource.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/mcg/mcg.o
+ .data          0x00000000        0x0 ./drivers/mcg/mcg.o
+ .bss           0x00000000        0x0 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000      0x7fc ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x16 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x34 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x3a ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x10 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x16 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x58 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000      0x147 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x9d ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x10 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000     0xf34a ./drivers/mcg/mcg.o
+ .debug_macro   0x00000000       0x10 ./drivers/mcg/mcg.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/uart/uart.o
+ .data          0x00000000        0x0 ./drivers/uart/uart.o
+ .bss           0x00000000        0x0 ./drivers/uart/uart.o
+ .debug_macro   0x00000000      0x7fc ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x16 ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x34 ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x3a ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x10 ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x16 ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x58 ./drivers/uart/uart.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/uart/uart.o
+ .debug_macro   0x00000000      0x147 ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x9d ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x10 ./drivers/uart/uart.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/uart/uart.o
+ .debug_macro   0x00000000     0xf34a ./drivers/uart/uart.o
+ .debug_macro   0x00000000       0x10 ./drivers/uart/uart.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .group         0x00000000        0x8 ./drivers/wdog/wdog.o
+ .text          0x00000000       0x3c ./drivers/wdog/wdog.o
+ .data          0x00000000        0x0 ./drivers/wdog/wdog.o
+ .bss           0x00000000        0x0 ./drivers/wdog/wdog.o
+ .debug_info    0x00000000      0x190 ./drivers/wdog/wdog.o
+ .debug_abbrev  0x00000000       0xb0 ./drivers/wdog/wdog.o
+ .debug_loc     0x00000000       0x20 ./drivers/wdog/wdog.o
+ .debug_aranges
+                0x00000000       0x20 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0xfa ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000      0x7fc ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x16 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x34 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x3a ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x10 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x16 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x58 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000      0x1b5 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000      0x147 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x9d ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x10 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000      0x1a1 ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000     0xf34a ./drivers/wdog/wdog.o
+ .debug_macro   0x00000000       0x10 ./drivers/wdog/wdog.o
+ .debug_line    0x00000000      0x39b ./drivers/wdog/wdog.o
+ .debug_str     0x00000000    0x54def ./drivers/wdog/wdog.o
+ .comment       0x00000000       0x7a ./drivers/wdog/wdog.o
+ .ARM.attributes
+                0x00000000       0x33 ./drivers/wdog/wdog.o
+ .debug_frame   0x00000000       0x38 ./drivers/wdog/wdog.o
+ .text          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .data          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .text          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .data          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .text          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .data          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .text          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .data          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .text          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .data          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .bss.__dso_handle
+                0x00000000        0x4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .text          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .data          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .text.__flush_cache
+                0x00000000        0x2 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .text          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .data          0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .text.__register_global_object
+                0x00000000       0x14 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .text.__cxa_atexit
+                0x00000000       0x38 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .text.__aeabi_atexit
+                0x00000000        0xa C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .text.__register_atexit
+                0x00000000        0x8 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .text.__init_hardware
+                0x00000000        0x4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .text.__init_user
+                0x00000000        0x4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .bss.atexit_curr_func
+                0x00000000        0x4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+ .bss.atexit_funcs
+                0x00000000      0x300 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+m_interrupts     0x1fff0000         0x000001e0         xr
+m_text           0x1fff01e0         0x0000fe20         xr
+m_data           0x20000000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./Project_Settings/Startup_Code/kinetis_sysinit.o
+LOAD ./Project_Settings/Startup_Code/__arm_start.o
+LOAD ./Project_Settings/Startup_Code/__arm_end.o
+LOAD ./Sources/scheduler.o
+LOAD ./Sources/gpio_k60.o
+LOAD ./common/uif.o
+LOAD ./common/stdlib.o
+LOAD ./common/printf.o
+LOAD ./common/io.o
+LOAD ./cpu/sysinit.o
+LOAD ./cpu/arm_cm4.o
+LOAD ./drivers/adc16/adc16.o
+LOAD ./drivers/lptmr/lptmr_pulse.o
+LOAD ./drivers/lptmr/lptmr_interrupt.o
+LOAD ./drivers/lptmr/lptmr_counter.o
+LOAD ./drivers/lptmr/lptmr_clocksource.o
+LOAD ./drivers/mcg/mcg.o
+LOAD ./drivers/uart/uart.o
+LOAD ./drivers/wdog/wdog.o
+                0x1fff1cd8                __pformatter = __pformatter_
+START GROUP
+LOAD C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a
+LOAD C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libm.a
+LOAD c:/freescale/cw mcu v10.6/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7e-m\libgcc.a
+LOAD C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libhosted.a
+LOAD C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libuart.a
+LOAD C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a
+END GROUP
+                0x20010000                _estack = 0x20010000
+                0x20010000                __SP_INIT = _estack
+                0x00000800                __heap_size = 0x800
+                0x00000800                __stack_size = 0x800
+
+.interrupts     0x1fff0000      0x1e0
+                0x1fff0000                __vector_table = .
+                0x1fff0000                . = ALIGN (0x4)
+ *(.vectortable)
+ .vectortable   0x1fff0000      0x1e0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+                0x1fff0000                InterruptVector
+                0x1fff01e0                . = ALIGN (0x4)
+
+.text           0x1fff01e0     0x2308
+                0x1fff01e0                . = ALIGN (0x4)
+ *(.text)
+ .text          0x1fff01e0       0x44 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+                0x1fff01e0                HardFault_Handler
+                0x1fff01e0                SysTick_Handler
+                0x1fff01e0                PendSV_Handler
+                0x1fff01e0                NMI_Handler
+                0x1fff01e0                UsageFault_Handler
+                0x1fff01e0                BusFault_Handler
+                0x1fff01e0                DebugMonitor_Handler
+                0x1fff01e0                SVC_Handler
+                0x1fff01e0                isr_default
+                0x1fff01e0                MemManage_Handler
+                0x1fff01e4                __init_hardware
+                0x1fff0218                __init_user
+                0x1fff0220                isrINT_NMI
+ .text          0x1fff0224       0x48 ./Project_Settings/Startup_Code/__arm_start.o
+                0x1fff0224                __thumb_startup
+                0x1fff0268                __iar_program_start
+ .text          0x1fff026c        0x4 ./Project_Settings/Startup_Code/__arm_end.o
+                0x1fff026c                _ExitProcess
+ .text          0x1fff0270      0x1e4 ./Sources/scheduler.o
+                0x1fff0270                OS_activateTask
+                0x1fff02b4                OS_terminateTask
+                0x1fff02f4                OS_chainTask
+                0x1fff0338                OS_createTask
+                0x1fff0378                delay
+                0x1fff0398                OS_startScheduler
+ .text          0x1fff0454      0x1b0 ./Sources/gpio_k60.o
+                0x1fff0454                taskC
+                0x1fff048c                taskB
+                0x1fff04cc                taskA
+                0x1fff050c                init_gpio
+                0x1fff0548                main
+                0x1fff05b0                porta_isr
+                0x1fff05d0                porte_isr
+                0x1fff05f0                portc_isr
+ .text          0x1fff0604      0x5fc ./common/stdlib.o
+                0x1fff0604                isspace
+                0x1fff0618                isalnum
+                0x1fff0644                isdigit
+                0x1fff0654                isupper
+                0x1fff0664                strcasecmp
+                0x1fff069c                strncasecmp
+                0x1fff0750                strtoul
+                0x1fff0878                strlen
+                0x1fff089c                strcat
+                0x1fff08cc                strncat
+                0x1fff094c                strcpy
+                0x1fff0978                strncpy
+                0x1fff09f4                strcmp
+                0x1fff0a2c                strncmp
+                0x1fff0ad4                memcpy
+                0x1fff0bbc                memset
+ .text          0x1fff0c00      0x650 ./common/printf.o
+                0x1fff0d8c                printk
+                0x1fff11ec                dprintf
+                0x1fff121c                sprintf
+ .text          0x1fff1250       0x34 ./common/io.o
+                0x1fff1250                in_char
+                0x1fff1260                out_char
+                0x1fff1274                char_present
+ .text          0x1fff1284       0xc8 ./cpu/sysinit.o
+                0x1fff1284                trace_clk_init
+                0x1fff12a4                fb_clk_init
+                0x1fff12c4                sysinit
+ .text          0x1fff134c      0x1f0 ./cpu/arm_cm4.o
+                0x1fff134c                stop
+                0x1fff1360                wait
+                0x1fff1374                write_vtor
+                0x1fff1380                enable_irq
+                0x1fff1444                disable_irq
+                0x1fff1504                set_irq_priority
+ .text          0x1fff153c       0xe8 ./drivers/lptmr/lptmr_interrupt.o
+                0x1fff153c                lptmr_interrupt
+                0x1fff15f4                lptmr_isr
+ .text          0x1fff1624      0x3d0 ./drivers/mcg/mcg.o
+                0x1fff1624                set_sys_dividers
+                0x1fff16a8                pll_init
+                0x1fff181c                mcg_pee_2_blpi
+                0x1fff18ec                mcg_blpi_2_pee
+                0x1fff19bc                mcg_pbe_2_pee
+ .text          0x1fff19f4      0x114 ./drivers/uart/uart.o
+                0x1fff19f4                uart_init
+                0x1fff1ae4                uart_getchar
+                0x1fff1af4                uart_putchar
+                0x1fff1b00                uart_getchar_present
+ *(.text*)
+ .text.exit     0x1fff1b08       0x38 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+                0x1fff1b08                exit
+ .text.long2str.isra.0
+                0x1fff1b40      0x196 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ *fill*         0x1fff1cd6        0x2 00
+ .text.__pformatter_
+                0x1fff1cd8      0x3f8 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+                0x1fff1cd8                __pformatter_
+ .text.memchr   0x1fff20d0       0x18 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+                0x1fff20d0                memchr
+ .text.strchr   0x1fff20e8       0x1a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+                0x1fff20e8                strchr
+ *fill*         0x1fff2102        0x2 00
+ .text.__init_cpp
+                0x1fff2104       0x4c C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+                0x1fff2104                __init_cpp
+ .text.__fini_cpp
+                0x1fff2150       0x34 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+                0x1fff2150                __fini_cpp
+ .text.__copy_rom_section
+                0x1fff2184       0x44 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+                0x1fff2184                __copy_rom_section
+ .text.__copy_rom_sections_to_ram
+                0x1fff21c8       0x30 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+                0x1fff21c8                __copy_rom_sections_to_ram
+ .text.__destroy_global_chain
+                0x1fff21f8       0x18 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+                0x1fff21f8                __destroy_global_chain
+ .text.__init_registers
+                0x1fff2210       0x24 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+                0x1fff2210                __init_registers
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.4
+                0x1fff2234       0x11 ./Sources/scheduler.o
+                                 0x14 (size before relaxing)
+ *fill*         0x1fff2245        0x3 00
+ .rodata.str1.4
+                0x1fff2248       0x71 ./Sources/gpio_k60.o
+                                 0x74 (size before relaxing)
+ *fill*         0x1fff22b9        0x3 00
+ .rodata.str1.4
+                0x1fff22bc       0xef ./cpu/arm_cm4.o
+                                 0xf0 (size before relaxing)
+ *fill*         0x1fff23ab        0x1 00
+ .rodata.str1.4
+                0x1fff23ac      0x130 ./drivers/lptmr/lptmr_interrupt.o
+ .rodata.str1.1
+                0x1fff24dc        0x1 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .rodata.CSWTCH.20
+                0x1fff24dd        0x5 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .rodata.CSWTCH.21
+                0x1fff24e2        0x5 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x1fff24e8                . = ALIGN (0x4)
+ *fill*         0x1fff24e7        0x1 00
+                0x1fff24e8                _etext = .
+
+.vfp11_veneer   0x1fff24e8        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x1fff24e8        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x1fff24e8        0x0
+ .iplt          0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+
+.rel.dyn        0x1fff24e8        0x0
+ .rel.iplt      0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x1fff24e8        0x0
+                0x1fff24e8                __exidx_start = .
+ *(.ARM.exidx*)
+                0x1fff24e8                __exidx_end = .
+
+.ctors          0x1fff24e8        0x0
+                0x1fff24e8                __CTOR_LIST__ = .
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x1fff24e8                __CTOR_END__ = .
+
+.dtors          0x1fff24e8        0x0
+                0x1fff24e8                __DTOR_LIST__ = .
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x1fff24e8                __DTOR_END__ = .
+
+.preinit_array  0x1fff24e8        0x0
+                0x1fff24e8                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x1fff24e8                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x1fff24e8        0x0
+                0x1fff24e8                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+                0x1fff24e8                PROVIDE (__init_array_end, .)
+
+.fini_array     0x1fff24e8        0x0
+                0x1fff24e8                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+                0x1fff24e8                PROVIDE (__fini_array_end, .)
+
+.data           0x20000000       0x54
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ .data          0x20000000       0x54 ./Sources/gpio_k60.o
+                0x20000000                taskInfo
+ *(.data*)
+                0x20000054                . = ALIGN (0x4)
+                0x20000054                _edata = .
+
+.igot.plt       0x20000054        0x0
+ .igot.plt      0x00000000        0x0 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+                0x20000054                . = ALIGN (0x4)
+
+.bss            0x20000054       0x38
+                0x20000054                __START_BSS = .
+                0x20000054                PROVIDE (__bss_start__, __START_BSS)
+ *(.bss)
+ .bss           0x20000054        0x4 ./Project_Settings/Startup_Code/__arm_start.o
+ .bss           0x20000058        0xc ./Sources/scheduler.o
+                0x20000058                schedulerTaskInfo
+ *(.bss*)
+ .bss.__stdio_exit
+                0x20000064        0x4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+                0x20000064                __stdio_exit
+ .bss.__console_exit
+                0x20000068        0x4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+                0x20000068                __console_exit
+ .bss.__S_romp  0x2000006c        0xc C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .bss.__global_destructor_chain
+                0x20000078        0x4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+                0x20000078                __global_destructor_chain
+ *(COMMON)
+ COMMON         0x2000007c        0xc ./cpu/sysinit.o
+                0x2000007c                core_clk_mhz
+                0x20000080                core_clk_khz
+                0x20000084                periph_clk_khz
+ COMMON         0x20000088        0x1 ./drivers/lptmr/lptmr_interrupt.o
+                0x20000088                LPTMR_INTERRUPT
+                0x2000008c                . = ALIGN (0x4)
+ *fill*         0x20000089        0x3 00
+                0x2000008c                __END_BSS = .
+                0x2000008c                PROVIDE (__bss_end__, __END_BSS)
+
+._user_heap_stack
+                0x2000008c     0x1000
+                0x2000008c                . = ALIGN (0x4)
+                0x2000008c                PROVIDE (end, .)
+                0x2000008c                PROVIDE (_end, .)
+                0x2000008c                __heap_addr = .
+                0x2000088c                . = (. + __heap_size)
+ *fill*         0x2000008c      0x800 00
+                0x2000108c                . = (. + __stack_size)
+ *fill*         0x2000088c      0x800 00
+                0x2000108c                . = ALIGN (0x4)
+                0x00000000                __S_romp = 0x0
+
+.ARM.attributes
+                0x00000000       0x33
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x33 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .ARM.attributes
+                0x00000033       0x33 ./Project_Settings/Startup_Code/__arm_start.o
+ .ARM.attributes
+                0x00000066       0x33 ./Project_Settings/Startup_Code/__arm_end.o
+ .ARM.attributes
+                0x00000099       0x33 ./Sources/scheduler.o
+ .ARM.attributes
+                0x000000cc       0x33 ./Sources/gpio_k60.o
+ .ARM.attributes
+                0x000000ff       0x33 ./common/stdlib.o
+ .ARM.attributes
+                0x00000132       0x33 ./common/printf.o
+ .ARM.attributes
+                0x00000165       0x33 ./common/io.o
+ .ARM.attributes
+                0x00000198       0x33 ./cpu/sysinit.o
+ .ARM.attributes
+                0x000001cb       0x33 ./cpu/arm_cm4.o
+ .ARM.attributes
+                0x000001fe       0x33 ./drivers/lptmr/lptmr_interrupt.o
+ .ARM.attributes
+                0x00000231       0x33 ./drivers/mcg/mcg.o
+ .ARM.attributes
+                0x00000264       0x33 ./drivers/uart/uart.o
+ .ARM.attributes
+                0x00000297       0x33 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .ARM.attributes
+                0x000002ca       0x33 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .ARM.attributes
+                0x000002fd       0x33 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .ARM.attributes
+                0x00000330       0x33 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .ARM.attributes
+                0x00000363       0x33 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .ARM.attributes
+                0x00000396       0x33 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .ARM.attributes
+                0x000003c9       0x33 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+OUTPUT(gpio.elf elf32-littlearm)
+
+.debug_info     0x00000000     0x4f98
+ .debug_info    0x00000000      0x2d6 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_info    0x000002d6      0x25f ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_info    0x00000535       0x5b ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_info    0x00000590      0x3b0 ./Sources/scheduler.o
+ .debug_info    0x00000940      0x7c9 ./Sources/gpio_k60.o
+ .debug_info    0x00001109      0x6f9 ./common/stdlib.o
+ .debug_info    0x00001802      0xafd ./common/printf.o
+ .debug_info    0x000022ff      0x36e ./common/io.o
+ .debug_info    0x0000266d      0x6fb ./cpu/sysinit.o
+ .debug_info    0x00002d68      0x4f6 ./cpu/arm_cm4.o
+ .debug_info    0x0000325e      0x262 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_info    0x000034c0      0x78c ./drivers/mcg/mcg.o
+ .debug_info    0x00003c4c      0x5a9 ./drivers/uart/uart.o
+ .debug_info    0x000041f5       0xe8 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .debug_info    0x000042dd      0x50e C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .debug_info    0x000047eb      0x120 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .debug_info    0x0000490b      0x108 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .debug_info    0x00004a13      0x136 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .debug_info    0x00004b49      0x19a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .debug_info    0x00004ce3      0x2b5 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+.debug_abbrev   0x00000000     0x1a5e
+ .debug_abbrev  0x00000000      0x142 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_abbrev  0x00000142      0x158 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_abbrev  0x0000029a       0x54 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_abbrev  0x000002ee      0x211 ./Sources/scheduler.o
+ .debug_abbrev  0x000004ff      0x1ec ./Sources/gpio_k60.o
+ .debug_abbrev  0x000006eb      0x164 ./common/stdlib.o
+ .debug_abbrev  0x0000084f      0x228 ./common/printf.o
+ .debug_abbrev  0x00000a77      0x14b ./common/io.o
+ .debug_abbrev  0x00000bc2      0x188 ./cpu/sysinit.o
+ .debug_abbrev  0x00000d4a      0x182 ./cpu/arm_cm4.o
+ .debug_abbrev  0x00000ecc      0x12c ./drivers/lptmr/lptmr_interrupt.o
+ .debug_abbrev  0x00000ff8      0x1ac ./drivers/mcg/mcg.o
+ .debug_abbrev  0x000011a4      0x186 ./drivers/uart/uart.o
+ .debug_abbrev  0x0000132a       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .debug_abbrev  0x000013a4      0x200 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .debug_abbrev  0x000015a4       0x95 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .debug_abbrev  0x00001639       0x89 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .debug_abbrev  0x000016c2       0x99 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .debug_abbrev  0x0000175b      0x137 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .debug_abbrev  0x00001892      0x1cc C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+.debug_loc      0x00000000     0x388a
+ .debug_loc     0x00000000       0x20 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_loc     0x00000020      0x2b3 ./Sources/scheduler.o
+ .debug_loc     0x000002d3       0xc0 ./Sources/gpio_k60.o
+ .debug_loc     0x00000393      0xfa3 ./common/stdlib.o
+ .debug_loc     0x00001336      0xfd1 ./common/printf.o
+ .debug_loc     0x00002307       0x81 ./common/io.o
+ .debug_loc     0x00002388       0x20 ./cpu/sysinit.o
+ .debug_loc     0x000023a8      0x11f ./cpu/arm_cm4.o
+ .debug_loc     0x000024c7       0x40 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_loc     0x00002507      0x25c ./drivers/mcg/mcg.o
+ .debug_loc     0x00002763      0x195 ./drivers/uart/uart.o
+ .debug_loc     0x000028f8       0x3e C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .debug_loc     0x00002936      0xbdc C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .debug_loc     0x00003512       0x62 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .debug_loc     0x00003574       0x7c C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .debug_loc     0x000035f0       0x9d C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .debug_loc     0x0000368d       0xb9 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .debug_loc     0x00003746      0x144 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+.debug_aranges  0x00000000      0x2d8
+ .debug_aranges
+                0x00000000       0x20 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_aranges
+                0x00000020       0x20 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_aranges
+                0x00000040       0x20 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_aranges
+                0x00000060       0x20 ./Sources/scheduler.o
+ .debug_aranges
+                0x00000080       0x20 ./Sources/gpio_k60.o
+ .debug_aranges
+                0x000000a0       0x20 ./common/stdlib.o
+ .debug_aranges
+                0x000000c0       0x20 ./common/printf.o
+ .debug_aranges
+                0x000000e0       0x20 ./common/io.o
+ .debug_aranges
+                0x00000100       0x20 ./cpu/sysinit.o
+ .debug_aranges
+                0x00000120       0x20 ./cpu/arm_cm4.o
+ .debug_aranges
+                0x00000140       0x20 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_aranges
+                0x00000160       0x20 ./drivers/mcg/mcg.o
+ .debug_aranges
+                0x00000180       0x20 ./drivers/uart/uart.o
+ .debug_aranges
+                0x000001a0       0x20 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .debug_aranges
+                0x000001c0       0x28 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .debug_aranges
+                0x000001e8       0x20 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .debug_aranges
+                0x00000208       0x20 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .debug_aranges
+                0x00000228       0x28 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .debug_aranges
+                0x00000250       0x30 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .debug_aranges
+                0x00000280       0x58 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+.debug_macro    0x00000000    0x10f8f
+ .debug_macro   0x00000000       0x9b ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x0000009b      0x7fc ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x00000897       0x28 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x000008bf       0x10 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x000008cf       0x16 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x000008e5       0x58 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x0000093d      0x1b5 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x00000af2      0x147 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x00000c39       0x9d ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x00000cd6       0x10 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x00000ce6      0x1a1 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x00000e87     0xf34a ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_macro   0x000101d1       0xed ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x000102be       0x16 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x000102d4       0x16 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x000102ea       0x10 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x000102fa       0x2e ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00010328       0x10 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_macro   0x00010338       0xa6 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x000103de       0x16 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x000103f4       0x16 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_macro   0x0001040a       0xfa ./Sources/scheduler.o
+ .debug_macro   0x00010504       0x16 ./Sources/scheduler.o
+ .debug_macro   0x0001051a       0x34 ./Sources/scheduler.o
+ .debug_macro   0x0001054e       0x3a ./Sources/scheduler.o
+ .debug_macro   0x00010588       0x10 ./Sources/scheduler.o
+ .debug_macro   0x00010598      0x10c ./Sources/gpio_k60.o
+ .debug_macro   0x000106a4       0xf0 ./common/stdlib.o
+ .debug_macro   0x00010794      0x1ee ./common/printf.o
+ .debug_macro   0x00010982       0x16 ./common/printf.o
+ .debug_macro   0x00010998       0x22 ./common/printf.o
+ .debug_macro   0x000109ba       0xfa ./common/io.o
+ .debug_macro   0x00010ab4       0xfe ./cpu/sysinit.o
+ .debug_macro   0x00010bb2       0xf0 ./cpu/arm_cm4.o
+ .debug_macro   0x00010ca2       0xff ./drivers/lptmr/lptmr_interrupt.o
+ .debug_macro   0x00010da1       0xf4 ./drivers/mcg/mcg.o
+ .debug_macro   0x00010e95       0xfa ./drivers/uart/uart.o
+
+.debug_line     0x00000000     0x3824
+ .debug_line    0x00000000      0x2ce ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_line    0x000002ce      0x27c ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_line    0x0000054a      0x242 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_line    0x0000078c      0x3f5 ./Sources/scheduler.o
+ .debug_line    0x00000b81      0x409 ./Sources/gpio_k60.o
+ .debug_line    0x00000f8a      0x571 ./common/stdlib.o
+ .debug_line    0x000014fb      0x52a ./common/printf.o
+ .debug_line    0x00001a25      0x3f5 ./common/io.o
+ .debug_line    0x00001e1a      0x408 ./cpu/sysinit.o
+ .debug_line    0x00002222      0x3b4 ./cpu/arm_cm4.o
+ .debug_line    0x000025d6      0x3b2 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_line    0x00002988      0x455 ./drivers/mcg/mcg.o
+ .debug_line    0x00002ddd      0x3c2 ./drivers/uart/uart.o
+ .debug_line    0x0000319f       0x94 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .debug_line    0x00003233      0x2b4 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .debug_line    0x000034e7       0x9f C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .debug_line    0x00003586       0x7d C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .debug_line    0x00003603       0x67 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .debug_line    0x0000366a       0xa9 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .debug_line    0x00003713      0x111 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+.debug_str      0x00000000    0x56581
+ .debug_str     0x00000000    0x54ca8 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+                              0x54d2b (size before relaxing)
+ .debug_str     0x00054ca8      0x28c ./Project_Settings/Startup_Code/__arm_start.o
+                               0x3bbc (size before relaxing)
+ .debug_str     0x00054f34      0x17a ./Project_Settings/Startup_Code/__arm_end.o
+                               0x3190 (size before relaxing)
+ .debug_str     0x000550ae      0x337 ./Sources/scheduler.o
+                              0x54e96 (size before relaxing)
+ .debug_str     0x000553e5      0x1d1 ./Sources/gpio_k60.o
+                              0x55039 (size before relaxing)
+ .debug_str     0x000555b6       0xca ./common/stdlib.o
+                              0x54e19 (size before relaxing)
+ .debug_str     0x00055680      0x50b ./common/printf.o
+                              0x55288 (size before relaxing)
+ .debug_str     0x00055b8b       0xf2 ./common/io.o
+                              0x54e5e (size before relaxing)
+ .debug_str     0x00055c7d       0xf8 ./cpu/sysinit.o
+                              0x54ffb (size before relaxing)
+ .debug_str     0x00055d75       0xab ./cpu/arm_cm4.o
+                              0x54ea9 (size before relaxing)
+ .debug_str     0x00055e20       0xdd ./drivers/lptmr/lptmr_interrupt.o
+                              0x54e3c (size before relaxing)
+ .debug_str     0x00055efd      0x105 ./drivers/mcg/mcg.o
+                              0x54feb (size before relaxing)
+ .debug_str     0x00056002       0x43 ./drivers/uart/uart.o
+                              0x54f36 (size before relaxing)
+ .debug_str     0x00056045       0x5a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+                                0x157 (size before relaxing)
+ .debug_str     0x0005609f      0x233 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+                                0x3b3 (size before relaxing)
+ .debug_str     0x000562d2       0x1c C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+                                0x148 (size before relaxing)
+ .debug_str     0x000562ee       0x1c C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+                                0x137 (size before relaxing)
+ .debug_str     0x0005630a      0x11b C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+                                0x181 (size before relaxing)
+ .debug_str     0x00056425       0x86 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+                                0x13c (size before relaxing)
+ .debug_str     0x000564ab       0xd6 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+                                0x1b5 (size before relaxing)
+
+.comment        0x00000000       0x79
+ .comment       0x00000000       0x79 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+                                 0x7a (size before relaxing)
+ .comment       0x00000000       0x7a ./Project_Settings/Startup_Code/__arm_start.o
+ .comment       0x00000000       0x7a ./Project_Settings/Startup_Code/__arm_end.o
+ .comment       0x00000000       0x7a ./Sources/scheduler.o
+ .comment       0x00000000       0x7a ./Sources/gpio_k60.o
+ .comment       0x00000000       0x7a ./common/stdlib.o
+ .comment       0x00000000       0x7a ./common/printf.o
+ .comment       0x00000000       0x7a ./common/io.o
+ .comment       0x00000000       0x7a ./cpu/sysinit.o
+ .comment       0x00000000       0x7a ./cpu/arm_cm4.o
+ .comment       0x00000000       0x7a ./drivers/lptmr/lptmr_interrupt.o
+ .comment       0x00000000       0x7a ./drivers/mcg/mcg.o
+ .comment       0x00000000       0x7a ./drivers/uart/uart.o
+ .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+.debug_frame    0x00000000      0x8dc
+ .debug_frame   0x00000000       0x58 ./Project_Settings/Startup_Code/kinetis_sysinit.o
+ .debug_frame   0x00000058       0x30 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_frame   0x00000088       0x20 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_frame   0x000000a8       0x88 ./Sources/scheduler.o
+ .debug_frame   0x00000130       0xd8 ./Sources/gpio_k60.o
+ .debug_frame   0x00000208      0x198 ./common/stdlib.o
+ .debug_frame   0x000003a0       0xf8 ./common/printf.o
+ .debug_frame   0x00000498       0x58 ./common/io.o
+ .debug_frame   0x000004f0       0x48 ./cpu/sysinit.o
+ .debug_frame   0x00000538       0x8c ./cpu/arm_cm4.o
+ .debug_frame   0x000005c4       0x44 ./drivers/lptmr/lptmr_interrupt.o
+ .debug_frame   0x00000608       0x7c ./drivers/mcg/mcg.o
+ .debug_frame   0x00000684       0x58 ./drivers/uart/uart.o
+ .debug_frame   0x000006dc       0x28 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(exit.o)
+ .debug_frame   0x00000704       0x64 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(printformat_.o)
+ .debug_frame   0x00000768       0x20 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(memchr.o)
+ .debug_frame   0x00000788       0x20 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\libc.a(strchr.o)
+ .debug_frame   0x000007a8       0x40 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(gcc_ctor_dtor.o)
+ .debug_frame   0x000007e8       0x48 C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(ROMCopy.o)
+ .debug_frame   0x00000830       0xac C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m\librt.a(__arm_eabi_init.o)
+
+.debug_ranges   0x00000000       0x30
+ .debug_ranges  0x00000000       0x30 ./Sources/scheduler.o
