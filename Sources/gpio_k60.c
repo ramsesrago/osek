@@ -16,8 +16,6 @@
 #define GPIO_PIN_MASK       0x1Fu
 #define GPIO_PIN(x)         (((1) << (x & GPIO_PIN_MASK)))
 
-#define NUMBER_OF_TASKS		(3)
-
 #include "common.h"
 #include "scheduler.h"
 
@@ -36,19 +34,19 @@ void taskC(void);
 
 sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 		[0] = {
-				.id = 0,
+				.id = TASK_A_ID,
 				.schedule = FULL,
 				.priority = 0,
-				.autoStart = 1	
+				.autoStart = 0
 		},
 		[1] = {
-				.id = 1,
+				.id = TASK_B_ID,
 				.schedule = FULL,
 				.priority = 1,
 				.autoStart = 0	
 		},
 		[2] = {
-				.id = 2,
+				.id = TASK_C_ID,
 				.schedule = FULL,
 				.priority = 2,
 				.autoStart = 0	
@@ -83,14 +81,53 @@ int main (void)
 	init_gpio();
 
 	/* Create tasks in the scheduler */
-	OS_createTask(&taskInfo[0]);
-	OS_createTask(&taskInfo[1]);
-	OS_createTask(&taskInfo[2]);
-
-	/* Start scheduler */
-	OS_startScheduler();
+	OS_createTask(&taskInfo[TASK_A_ID]);
+	OS_createTask(&taskInfo[TASK_B_ID]);
+	OS_createTask(&taskInfo[TASK_C_ID]);
+	
+	/* Start OS */
+	OS_startOS();
+	
+	for(;;)
+	{
+		
+	}
 
 	return 0;
+}
+
+void taskA(void)
+{
+	for(;;)
+	{
+		printf("Hello I am task 1\n");
+		//Toggle the green LED on PTA10
+		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(10));
+		OS_activateTask(taskInfo[TASK_B_ID].id);
+		printf("Hello I am task 1 again from return\n");
+	}
+}
+
+void taskB(void)
+{
+	for(;;)
+	{
+		printf("Hello I am task 2\n");
+		//Toggle the green LED on PTA29
+		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(29));
+		OS_chainTask(2);
+	}
+}
+
+void taskC(void)
+{
+	for(;;)
+	{
+		printf("Hello I am task 3\n");
+		//Toggle the green LED on PTA28
+		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(28));
+		OS_terminateTask();
+	}
 }
 
 /*
@@ -149,41 +186,3 @@ void portc_isr(void)
 {
 	PORTC_ISFR = 0xFFFFFFFF;  //Clear Port C ISR flags
 }
-
-void taskA(void)
-{
-	for(;;)
-	{
-		taskInfo[0].state = RUNNING;
-		printf("Hello I am task 1\n");
-		//Toggle the green LED on PTA10
-		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(10));
-		OS_activateTask(1);
-		OS_terminateTask();
-	}
-}
-
-void taskB(void)
-{
-	for(;;)
-	{
-		taskInfo[1].state = RUNNING;
-		printf("Hello I am task 2\n");
-		//Toggle the green LED on PTA29
-		OS_chainTask(2);
-		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(29));
-	}
-}
-
-void taskC(void)
-{
-	for(;;)
-	{
-		taskInfo[2].state = RUNNING;
-		printf("Hello I am task 3\n");
-		//Toggle the green LED on PTA28
-		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(28));
-		OS_terminateTask();
-	}
-}
-

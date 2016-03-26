@@ -10,24 +10,43 @@
 /* Check priority */
 static int checkPriority();
 
+/* Schedule policy function */
+static void scheduler(void);
+
 sTaskInfo* schedulerTaskInfo[3] = {NULL};
+sTaskInfo* currTaskInfo = NULL;
 
 register int r14 asm ("r14");
+
+/***********************************************************************  
+ If there is a task in RUNNING state, save the return address in its 
+ respective TCB structure and then set as READY the corresponding
+ task
+ **********************************************************************/
 
 eErrorID OS_activateTask(taskId taskId)
 {
 	/* Ask if the scheduler is NON OR FULL PREEMPTIVE */
-	int i;
+	uint8_t i;
 	eErrorID status = ERROR;
-	for(i = 0; i < 3; i++)
+	//@TODO: What if the user activates the same task???
+	/* Check if the id is valid */
+	if(taskId >= 0 && taskId < NUMBER_OF_TASKS)
 	{
-		if(schedulerTaskInfo[i]->id == taskId)
+		for(i = 0; i < NUMBER_OF_TASKS; i++)
 		{
-			schedulerTaskInfo[i]->state = READY;
-			status = SUCCESSFUL;
-			break;
+			/* Check if there is a task running */
+			if(schedulerTaskInfo[i]->state == RUNNING)
+			{
+				schedulerTaskInfo[i]->returnAddress = (uint32_t*)r14;
+				break;
+			}
 		}
+
+		schedulerTaskInfo[taskId]->state = READY;
+		status = SUCCESSFUL;
 	}
+	scheduler();
 	return status;
 }
 
@@ -35,7 +54,8 @@ eErrorID OS_terminateTask()
 {
 	int i;
 	eErrorID status = ERROR;
-	for(i = 0; i < 3; i++)
+	//@TODO: Clean up stacks
+	for(i = 0; i < NUMBER_OF_TASKS; i++)
 	{
 		if(schedulerTaskInfo[i]->state == RUNNING)
 		{
@@ -44,6 +64,7 @@ eErrorID OS_terminateTask()
 			break;
 		}
 	}
+	scheduler();
 	return status;
 }
 
@@ -51,7 +72,7 @@ eErrorID OS_chainTask(taskId taskId)
 {
 	int i;
 	eErrorID status = ERROR;
-	for(i = 0; i < 3; i++)
+	for(i = 0; i < NUMBER_OF_TASKS; i++)
 	{
 		if(schedulerTaskInfo[i]->id == taskId)
 		{
@@ -72,36 +93,38 @@ eErrorID OS_createTask(sTaskInfo* taskInfo)
 	case 2: schedulerTaskInfo[2] = taskInfo; break;
 	default: printf("Task not defined");
 	}
+	return ERROR;
 }
 
-eErrorID OS_startScheduler()
+eErrorID OS_startOS()
 {
-	int id = 0xEE;
-	int i;
+	uint8_t id = 0xEE;
+	uint8_t i = NUMBER_OF_TASKS;
 
 	/* Auto start initialization */
-	for(i = 0; i < 3; i++)
+	do
 	{
+		/* We have a autostart task */
 		if(schedulerTaskInfo[i]->autoStart == 1)
 		{
 			id = schedulerTaskInfo[i]->id;
+			OS_activateTask(id);
 			break;
 		}
-	}
-	/* We have a autostart task */
-	if(id != 0xEE)
+	}while(--i);
+	OS_activateTask(TASK_A_ID);
+	scheduler();
+	return ERROR;
+}
+
+static void scheduler(void)
+{
+	taskId id;
+
+	id = checkPriority();
+	if(schedulerTaskInfo[id]->state == READY)
 	{
-		OS_activateTask(id);
 		schedulerTaskInfo[id]->task();
-	}
-	while(1)
-	{
-		delay();
-		id = checkPriority();
-		if(schedulerTaskInfo[id]->state == READY)
-		{
-			schedulerTaskInfo[id]->task();
-		}
 	}
 }
 
@@ -129,18 +152,4 @@ static int checkPriority()
 	return i;
 }
 
-/*
- * Function to provide a short delay
- */
-void delay()
-{
-	unsigned int i, n;
-	for(i=0; i < 30000; i++)
-	{
-		for(n=0; n < 200; n++)
-		{
-			asm("nop");
-		}
-	}
-}
 

@@ -8,6 +8,8 @@
 #ifndef SCHEDULER_H_
 #define SCHEDULER_H_
 
+#include "osek_config.h"
+
 /* Enums declarations */
 typedef enum
 {
@@ -21,7 +23,7 @@ typedef enum
 	FULL
 }eSchedule;
 
-typedef int taskId;
+typedef uint32_t taskId;
 
 typedef enum
 {
@@ -39,7 +41,7 @@ typedef struct
 	uint32_t autoStart;	
 	eTaskState state;
 	void (*task)(void);
-	uint32_t* funAddress;
+	uint32_t* returnAddress;
 }sTaskInfo;
 
 
@@ -56,8 +58,6 @@ eErrorID OS_chainTask(taskId);
 eErrorID OS_createTask(sTaskInfo*);
 
 /* Function to start scheduling */
-eErrorID OS_startScheduler();
-
-void delay(void);
+eErrorID OS_startOS();
 
 #endif /* SCHEDULER_H_ */

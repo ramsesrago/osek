@@ -18,7 +18,7 @@ Sources/scheduler.o: ../Sources/scheduler.c \
  C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/assert_api.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/io.h \
  C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/stdlib.h \
- ../Sources/scheduler.h
+ ../Sources/scheduler.h ../Sources/osek_config.h
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/common.h:
 
@@ -59,3 +59,5 @@ C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/c
 C:/Freescale/CW\ MCU\ v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common/stdlib.h:
 
 ../Sources/scheduler.h:
+
+../Sources/osek_config.h:
