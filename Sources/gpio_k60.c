@@ -28,37 +28,40 @@ void lptmr_isr(void);
 void init_gpio(void);
 
 /* Task declarations */
-void taskA(void);
-void taskB(void);
-void taskC(void);
+TASK(taskA);
+TASK(taskB);
+TASK(taskC);
 
 sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 		[0] = {
 				.id = TASK_A_ID,
 				.schedule = FULL,
 				.priority = 0,
-				.autoStart = 0
+				.autoStart = 0,
+				.task = task_taskA
 		},
 		[1] = {
 				.id = TASK_B_ID,
 				.schedule = FULL,
 				.priority = 1,
-				.autoStart = 0	
+				.autoStart = 0,
+				.task = task_taskB
 		},
 		[2] = {
 				.id = TASK_C_ID,
 				.schedule = FULL,
 				.priority = 2,
-				.autoStart = 0	
+				.autoStart = 0,
+				.task = task_taskC	
 		}
 };
 
-void (* const tasks[])(void) =
-{
-		taskA,
-		taskB,
-		taskC
-};
+//void (* const tasks[])(void) =
+//{
+//		taskA,
+//		taskB,
+//		taskC
+//};
 
 /********************************************************************/
 
@@ -96,7 +99,7 @@ int main (void)
 	return 0;
 }
 
-void taskA(void)
+TASK(taskA)
 {
 	for(;;)
 	{
@@ -108,18 +111,19 @@ void taskA(void)
 	}
 }
 
-void taskB(void)
+TASK(taskB)
 {
 	for(;;)
 	{
 		printf("Hello I am task 2\n");
 		//Toggle the green LED on PTA29
 		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(29));
-		OS_chainTask(2);
+		//OS_chainTask(TASK_B_ID);
+		OS_terminateTask();
 	}
 }
 
-void taskC(void)
+TASK(taskC)
 {
 	for(;;)
 	{

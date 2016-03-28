@@ -9,6 +9,8 @@
 #define SCHEDULER_H_
 
 #include "osek_config.h"
+#define TASK(taskname) 				void task_##taskname(void)
+#define getTaskAddress(taskName) 	task_##taskname
 
 /* Enums declarations */
 typedef enum

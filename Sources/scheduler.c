@@ -7,14 +7,15 @@
 #include "common.h"
 #include "scheduler.h"
 
-/* Check priority */
-static int checkPriority();
+/* Get the next task ID */
+static taskId getNextTaskId();
 
 /* Schedule policy function */
 static void scheduler(void);
 
 sTaskInfo* schedulerTaskInfo[3] = {NULL};
 sTaskInfo* currTaskInfo = NULL;
+taskId globalId;
 
 register int r14 asm ("r14");
 
@@ -39,6 +40,7 @@ eErrorID OS_activateTask(taskId taskId)
 			if(schedulerTaskInfo[i]->state == RUNNING)
 			{
 				schedulerTaskInfo[i]->returnAddress = (uint32_t*)r14;
+				schedulerTaskInfo[i]->state = READY;
 				break;
 			}
 		}
@@ -102,16 +104,16 @@ eErrorID OS_startOS()
 	uint8_t i = NUMBER_OF_TASKS;
 
 	/* Auto start initialization */
-	do
-	{
-		/* We have a autostart task */
-		if(schedulerTaskInfo[i]->autoStart == 1)
-		{
-			id = schedulerTaskInfo[i]->id;
-			OS_activateTask(id);
-			break;
-		}
-	}while(--i);
+//	do
+//	{
+//		/* We have a autostart task */
+//		if(schedulerTaskInfo[i]->autoStart == 1)
+//		{
+//			id = schedulerTaskInfo[i]->id;
+//			OS_activateTask(id);
+//			break;
+//		}
+//	}while(--i);
 	OS_activateTask(TASK_A_ID);
 	scheduler();
 	return ERROR;
@@ -121,35 +123,29 @@ static void scheduler(void)
 {
 	taskId id;
 
-	id = checkPriority();
-	if(schedulerTaskInfo[id]->state == READY)
+	globalId = getNextTaskId();
+	if((schedulerTaskInfo[globalId]->state == READY) && (globalId < NUMBER_OF_TASKS))
 	{
-		schedulerTaskInfo[id]->task();
+		schedulerTaskInfo[globalId]->task();
 	}
 }
 
-static int checkPriority()
+static taskId getNextTaskId()
 {
-	int i = 0;
-
-	if((schedulerTaskInfo[0]->priority > schedulerTaskInfo[1]->priority) && (schedulerTaskInfo[0]->state == READY))
+	taskId i;
+	int8_t prio = NUMBER_OF_TASKS;
+	
+	/* Get the index of the ready task with the greatest priority */
+	for(i = 0; i < NUMBER_OF_TASKS - 1; i++)
 	{
-		i =  schedulerTaskInfo[0]->id;
+		if(((schedulerTaskInfo[i]->state == READY) && (schedulerTaskInfo[i+1]->state == READY)) && \
+				(schedulerTaskInfo[prio]->priority < schedulerTaskInfo[i+1]->priority))
+		{
+			prio = schedulerTaskInfo[i]->id;
+		}
 	}
-	else if((schedulerTaskInfo[0]->priority < schedulerTaskInfo[1]->priority) && (schedulerTaskInfo[1]->state == READY))
-	{
-		i =  schedulerTaskInfo[1]->id;
-	}
-	if((schedulerTaskInfo[i]->priority > schedulerTaskInfo[2]->priority) && (schedulerTaskInfo[i]->state == READY))
-	{
-		i =  schedulerTaskInfo[0]->id;
-	}
-	else if((schedulerTaskInfo[i]->priority < schedulerTaskInfo[2]->priority) && (schedulerTaskInfo[2]->state == READY))
-	{
-		i =  schedulerTaskInfo[2]->id;
-	}
-
-	return i;
+	
+	return prio;
 }
 
 
