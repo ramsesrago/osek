@@ -12,6 +12,8 @@
 #define TASK(taskname) 				void task_##taskname(void)
 #define getTaskAddress(taskName) 	task_##taskname
 
+#define INVALID_TASK_ID				(0xEE)
+
 /* Enums declarations */
 typedef enum
 {

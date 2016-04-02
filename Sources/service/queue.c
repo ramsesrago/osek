@@ -23,6 +23,7 @@ Queue* createQueue(int32_t maxElements)
         /* Return the pointer */
         return Q;
 }
+
 void dequeue(Queue* Q)
 {
         /* If Queue size is zero then it is empty. So we cannot pop */
@@ -44,6 +45,7 @@ void dequeue(Queue* Q)
         }
         return;
 }
+
 int32_t front(Queue* Q)
 {
         if(Q->size==0)
@@ -54,6 +56,7 @@ int32_t front(Queue* Q)
         /* Return the element which is at the front*/
         return Q->element[Q->front];
 }
+
 void enqueue(Queue* Q, int32_t element)
 {
         /* If the Queue is full, we cannot push an element into it as there is no space for it.*/

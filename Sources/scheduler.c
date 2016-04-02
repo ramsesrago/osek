@@ -6,6 +6,7 @@
  */
 #include "common.h"
 #include "scheduler.h"
+#include "service/queue.h"
 
 /* Get the next task ID */
 static taskId getNextTaskId();
@@ -15,7 +16,8 @@ static void scheduler(void);
 
 sTaskInfo* schedulerTaskInfo[3] = {NULL};
 sTaskInfo* currTaskInfo = NULL;
-taskId globalId;
+taskId globalId = INVALID_TASK_ID;
+Queue* queue = NULL;
 
 register int r14 asm ("r14");
 
@@ -39,13 +41,16 @@ eErrorID OS_activateTask(taskId taskId)
 			/* Check if there is a task running */
 			if(schedulerTaskInfo[i]->state == RUNNING)
 			{
-				schedulerTaskInfo[i]->returnAddress = (uint32_t*)r14;
+				schedulerTaskInfo[i]->returnAddress = r14;
 				schedulerTaskInfo[i]->state = READY;
+				enqueue(queue, i);
 				break;
 			}
 		}
 
 		schedulerTaskInfo[taskId]->state = READY;
+		/* Enque to the ready tasks */
+		enqueue(queue, taskId);
 		status = SUCCESSFUL;
 	}
 	scheduler();
@@ -104,16 +109,17 @@ eErrorID OS_startOS()
 	uint8_t i = NUMBER_OF_TASKS;
 
 	/* Auto start initialization */
-//	do
-//	{
-//		/* We have a autostart task */
-//		if(schedulerTaskInfo[i]->autoStart == 1)
-//		{
-//			id = schedulerTaskInfo[i]->id;
-//			OS_activateTask(id);
-//			break;
-//		}
-//	}while(--i);
+	//	do
+	//	{
+	//		/* We have a autostart task */
+	//		if(schedulerTaskInfo[i]->autoStart == 1)
+	//		{
+	//			id = schedulerTaskInfo[i]->id;
+	//			OS_activateTask(id);
+	//			break;
+	//		}
+	//	}while(--i);
+	queue = createQueue(NUMBER_OF_TASKS);
 	OS_activateTask(TASK_A_ID);
 	scheduler();
 	return ERROR;
@@ -122,30 +128,54 @@ eErrorID OS_startOS()
 static void scheduler(void)
 {
 	taskId id;
+	globalId = 0xEE;
 
-	globalId = getNextTaskId();
-	if((schedulerTaskInfo[globalId]->state == READY) && (globalId < NUMBER_OF_TASKS))
+	while(globalId == INVALID_TASK_ID)
 	{
-		schedulerTaskInfo[globalId]->task();
+		globalId = getNextTaskId();
+	}
+	if(schedulerTaskInfo[globalId]->state == READY)
+	{
+		schedulerTaskInfo[globalId]->state = RUNNING;
+		/* If the return address is null, means the task has not been preempted */
+		if(schedulerTaskInfo[globalId]->returnAddress == NULL)
+		{
+			schedulerTaskInfo[globalId]->task();
+		}
+		else
+		{
+			asm("mov pc, %0" : : "r" (schedulerTaskInfo[globalId]->returnAddress));
+		}
 	}
 }
 
 static taskId getNextTaskId()
 {
-	taskId i;
-	int8_t prio = NUMBER_OF_TASKS;
+	taskId index = (taskId)INVALID_TASK_ID;
+	uint32_t topPriority = 0;
+	uint8_t i = 0;
 	
-	/* Get the index of the ready task with the greatest priority */
-	for(i = 0; i < NUMBER_OF_TASKS - 1; i++)
+	/* If size is bigger than zero, means that we have at least one ready task */
+#if 0
+	if(queue->size >  0)
 	{
-		if(((schedulerTaskInfo[i]->state == READY) && (schedulerTaskInfo[i+1]->state == READY)) && \
-				(schedulerTaskInfo[prio]->priority < schedulerTaskInfo[i+1]->priority))
+		/* Get the index of the ready task with the greatest priority */
+		// @TODO: Implement logic for more than one ready task
+		i = (taskId)front(queue);
+		dequeue(queue);
+	}
+#endif
+	for(; i < NUMBER_OF_TASKS; i++)
+	{
+		if(schedulerTaskInfo[i]->state == READY)
 		{
-			prio = schedulerTaskInfo[i]->id;
+			if(schedulerTaskInfo[i]->priority >= topPriority)
+			{
+				topPriority = schedulerTaskInfo[i]->priority;
+				index = (taskId)i;
+			}
 		}
 	}
-	
-	return prio;
+	return index;
 }
-
 

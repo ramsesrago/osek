@@ -38,6 +38,7 @@ sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 				.schedule = FULL,
 				.priority = 0,
 				.autoStart = 0,
+				.returnAddress = NULL,
 				.task = task_taskA
 		},
 		[1] = {
@@ -45,6 +46,7 @@ sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 				.schedule = FULL,
 				.priority = 1,
 				.autoStart = 0,
+				.returnAddress = NULL,
 				.task = task_taskB
 		},
 		[2] = {
@@ -52,6 +54,7 @@ sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 				.schedule = FULL,
 				.priority = 2,
 				.autoStart = 0,
+				.returnAddress = NULL,
 				.task = task_taskC	
 		}
 };
@@ -118,7 +121,7 @@ TASK(taskB)
 		printf("Hello I am task 2\n");
 		//Toggle the green LED on PTA29
 		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(29));
-		//OS_chainTask(TASK_B_ID);
+		OS_chainTask(TASK_C_ID);
 		OS_terminateTask();
 	}
 }
