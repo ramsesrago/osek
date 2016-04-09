@@ -21,4 +21,6 @@
 	#define TASK_C_ID			(2)
 #endif
 
+#define TASK_STACK_SIZE	(30)
+
 #endif /* OSEK_CONFIG_H_ */

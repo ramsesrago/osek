@@ -17,7 +17,7 @@ static void scheduler(void);
 sTaskInfo* schedulerTaskInfo[3] = {NULL};
 sTaskInfo* currTaskInfo = NULL;
 taskId globalId = INVALID_TASK_ID;
-Queue* queue = NULL;
+//Queue* queue = NULL;
 
 register int r14 asm ("r14");
 
@@ -29,7 +29,6 @@ register int r14 asm ("r14");
 
 eErrorID OS_activateTask(taskId taskId)
 {
-	/* Ask if the scheduler is NON OR FULL PREEMPTIVE */
 	uint8_t i;
 	eErrorID status = ERROR;
 	//@TODO: What if the user activates the same task???
@@ -43,14 +42,10 @@ eErrorID OS_activateTask(taskId taskId)
 			{
 				schedulerTaskInfo[i]->returnAddress = r14;
 				schedulerTaskInfo[i]->state = READY;
-				enqueue(queue, i);
 				break;
 			}
 		}
-
 		schedulerTaskInfo[taskId]->state = READY;
-		/* Enque to the ready tasks */
-		enqueue(queue, taskId);
 		status = SUCCESSFUL;
 	}
 	scheduler();
@@ -67,6 +62,7 @@ eErrorID OS_terminateTask()
 		if(schedulerTaskInfo[i]->state == RUNNING)
 		{
 			schedulerTaskInfo[i]->state = SUSPENDED;
+			schedulerTaskInfo[i]->returnAddress = NULL;
 			status = SUCCESSFUL;
 			break;
 		}
@@ -95,9 +91,18 @@ eErrorID OS_createTask(sTaskInfo* taskInfo)
 {
 	switch(taskInfo->id)
 	{
-	case 0: schedulerTaskInfo[0] = taskInfo; break;
-	case 1: schedulerTaskInfo[1] = taskInfo; break;
-	case 2: schedulerTaskInfo[2] = taskInfo; break;
+	case 0: schedulerTaskInfo[0] = taskInfo; 
+	schedulerTaskInfo[0]->sp = &schedulerTaskInfo[0]->stack[TASK_STACK_SIZE-2];
+	schedulerTaskInfo[0]->stack[TASK_STACK_SIZE-1] = schedulerTaskInfo[0]->returnAddress;
+	break;
+	case 1: schedulerTaskInfo[1] = taskInfo; 
+	schedulerTaskInfo[1]->sp = &schedulerTaskInfo[1]->stack[TASK_STACK_SIZE-2];
+	schedulerTaskInfo[1]->stack[TASK_STACK_SIZE-1] = schedulerTaskInfo[1]->returnAddress;
+	break;
+	case 2: schedulerTaskInfo[2] = taskInfo; 
+	schedulerTaskInfo[2]->sp = &schedulerTaskInfo[2]->stack[TASK_STACK_SIZE-2];
+	schedulerTaskInfo[2]->stack[TASK_STACK_SIZE-1] = schedulerTaskInfo[2]->returnAddress;
+	break;
 	default: printf("Task not defined");
 	}
 	return ERROR;
@@ -105,47 +110,41 @@ eErrorID OS_createTask(sTaskInfo* taskInfo)
 
 eErrorID OS_startOS()
 {
+#if 0
 	uint8_t id = 0xEE;
 	uint8_t i = NUMBER_OF_TASKS;
 
 	/* Auto start initialization */
-	//	do
-	//	{
-	//		/* We have a autostart task */
-	//		if(schedulerTaskInfo[i]->autoStart == 1)
-	//		{
-	//			id = schedulerTaskInfo[i]->id;
-	//			OS_activateTask(id);
-	//			break;
-	//		}
-	//	}while(--i);
+	do
+	{
+		/* We have a autostart task */
+		if(schedulerTaskInfo[i]->autoStart == 1)
+		{
+			id = schedulerTaskInfo[i]->id;
+			OS_activateTask(id);
+			break;
+		}
+	}while(--i);
 	queue = createQueue(NUMBER_OF_TASKS);
+#endif
 	OS_activateTask(TASK_A_ID);
-	scheduler();
 	return ERROR;
 }
 
 static void scheduler(void)
 {
-	taskId id;
 	globalId = 0xEE;
 
 	while(globalId == INVALID_TASK_ID)
 	{
 		globalId = getNextTaskId();
 	}
+	//@TODO: Remove unnecessary ready verification
 	if(schedulerTaskInfo[globalId]->state == READY)
 	{
 		schedulerTaskInfo[globalId]->state = RUNNING;
-		/* If the return address is null, means the task has not been preempted */
-		if(schedulerTaskInfo[globalId]->returnAddress == NULL)
-		{
-			schedulerTaskInfo[globalId]->task();
-		}
-		else
-		{
-			asm("mov pc, %0" : : "r" (schedulerTaskInfo[globalId]->returnAddress));
-		}
+		asm("mov sp, %0" : : "r" (schedulerTaskInfo[globalId]->sp));
+		//schedulerTaskInfo[globalId]->sp = schedulerTaskInfo[globalId]->sp - 2;
 	}
 }
 
@@ -154,9 +153,9 @@ static taskId getNextTaskId()
 	taskId index = (taskId)INVALID_TASK_ID;
 	uint32_t topPriority = 0;
 	uint8_t i = 0;
-	
-	/* If size is bigger than zero, means that we have at least one ready task */
+
 #if 0
+	/* If size is bigger than zero, means that we have at least one ready task */
 	if(queue->size >  0)
 	{
 		/* Get the index of the ready task with the greatest priority */

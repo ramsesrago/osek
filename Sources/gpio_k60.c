@@ -13,19 +13,30 @@
  *
  */
 
-#define GPIO_PIN_MASK       0x1Fu
-#define GPIO_PIN(x)         (((1) << (x & GPIO_PIN_MASK)))
+/*
+ * Authors:
+ * - Ramsés Ramírez, Oswaldo González
+ *   Tecnológico de Monterrey
+ */
 
 #include "common.h"
 #include "scheduler.h"
+
+#define GPIO_PIN_MASK       0x1Fu
+#define GPIO_PIN(x)         (((1) << (x & GPIO_PIN_MASK)))
+
+#define CORE_CLOCK			(96000000)
+#define SYSTICK_FREQUENCY	(1000)
 
 /* Interrupt declarations */
 void porta_isr(void);
 void porte_isr(void);
 void lptmr_isr(void);
+void SysTick_Handler();
 
 /* Function declarations */
 void init_gpio(void);
+void init_systick(void);
 
 /* Task declarations */
 TASK(taskA);
@@ -38,7 +49,7 @@ sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 				.schedule = FULL,
 				.priority = 0,
 				.autoStart = 0,
-				.returnAddress = NULL,
+				.returnAddress = &task_taskA,
 				.task = task_taskA
 		},
 		[1] = {
@@ -46,7 +57,7 @@ sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 				.schedule = FULL,
 				.priority = 1,
 				.autoStart = 0,
-				.returnAddress = NULL,
+				.returnAddress = &task_taskB,
 				.task = task_taskB
 		},
 		[2] = {
@@ -54,8 +65,8 @@ sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 				.schedule = FULL,
 				.priority = 2,
 				.autoStart = 0,
-				.returnAddress = NULL,
-				.task = task_taskC	
+				.returnAddress = &task_taskC,
+				.task = task_taskC
 		}
 };
 
@@ -65,6 +76,8 @@ sTaskInfo taskInfo[NUMBER_OF_TASKS] = {
 //		taskB,
 //		taskC
 //};
+
+uint32_t var = 0;
 
 /********************************************************************/
 
@@ -85,18 +98,20 @@ int main (void)
 
 	/* Initialize GPIO on TWR-K60N512 */
 	init_gpio();
+	/* Initialize systick */
+	//init_systick();
 
 	/* Create tasks in the scheduler */
 	OS_createTask(&taskInfo[TASK_A_ID]);
 	OS_createTask(&taskInfo[TASK_B_ID]);
 	OS_createTask(&taskInfo[TASK_C_ID]);
-	
+
 	/* Start OS */
 	OS_startOS();
-	
+
 	for(;;)
 	{
-		
+
 	}
 
 	return 0;
@@ -106,11 +121,11 @@ TASK(taskA)
 {
 	for(;;)
 	{
-		printf("Hello I am task 1\n");
+		//printf("Hello I am task 1\n");
 		//Toggle the green LED on PTA10
+		var = 5;
 		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(10));
-		OS_activateTask(taskInfo[TASK_B_ID].id);
-		printf("Hello I am task 1 again from return\n");
+		var = 10;
 	}
 }
 
@@ -118,11 +133,11 @@ TASK(taskB)
 {
 	for(;;)
 	{
-		printf("Hello I am task 2\n");
+		//printf("Hello I am task 2\n");
 		//Toggle the green LED on PTA29
+		var = 15;
 		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(29));
-		OS_chainTask(TASK_C_ID);
-		OS_terminateTask();
+		var = 20;
 	}
 }
 
@@ -130,10 +145,11 @@ TASK(taskC)
 {
 	for(;;)
 	{
-		printf("Hello I am task 3\n");
+		//printf("Hello I am task 3\n");
 		//Toggle the green LED on PTA28
+		var = 25;
 		GPIOA_PTOR |= GPIO_PDOR_PDO(GPIO_PIN(28));
-		OS_terminateTask();
+		var = 30;
 	}
 }
 
@@ -166,6 +182,18 @@ void init_gpio()
 	GPIOA_PDDR = GPIO_PDDR_PDD(GPIO_PIN(10) | GPIO_PIN(11) | GPIO_PIN(28) | GPIO_PIN(29) );	
 }
 
+void init_systick(void)
+{
+#if 0
+	SYST_CSR = 0x00U;
+	SYST_RVR = SysTick_RVR_RELOAD(0x00632EA0);
+	SYST_CVR = SysTick_CVR_CURRENT(0x00);
+	SYST_CSR = (SysTick_CSR_CLKSOURCE_MASK | SysTick_CSR_ENABLE_MASK); 
+#endif
+	SYST_RVR = CORE_CLOCK/SYSTICK_FREQUENCY;
+	SYST_CSR = SysTick_CSR_ENABLE_MASK | SysTick_CSR_TICKINT_MASK | SysTick_CSR_CLKSOURCE_MASK;
+}
+
 /********************************************************************/
 
 /*
@@ -173,8 +201,17 @@ void init_gpio()
  */
 void porta_isr(void)
 {
+	static int i = -1;
 	PORTA_ISFR = 0xFFFFFFFF;  //Clear Port A ISR flags
-	printf("SW1 Pressed\n");
+	if(i < 3) i++;
+	else i = -1;
+	switch(i)
+	{
+		case 0: OS_activateTask(TASK_B_ID); break;
+		case 1: OS_activateTask(TASK_C_ID); break;
+		case 2: OS_activateTask(TASK_A_ID); break;
+		default: break;
+	}
 }
 
 /*
@@ -192,4 +229,8 @@ void porte_isr(void)
 void portc_isr(void)
 {
 	PORTC_ISFR = 0xFFFFFFFF;  //Clear Port C ISR flags
+}
+void SysTick_Handler()
+{
+	printf("systick\n");
 }

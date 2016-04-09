@@ -9,9 +9,9 @@
 #define SCHEDULER_H_
 
 #include "osek_config.h"
+
 #define TASK(taskname) 				void task_##taskname(void)
 #define getTaskAddress(taskName) 	task_##taskname
-
 #define INVALID_TASK_ID				(0xEE)
 
 /* Enums declarations */
@@ -39,13 +39,15 @@ typedef enum
 
 typedef struct
 {
-	taskId id;
-	eSchedule schedule;
-	uint32_t priority;
-	uint32_t autoStart;	
-	eTaskState state;
-	void (*task)(void);
-	uint32_t* returnAddress;
+	taskId 		id;
+	eSchedule 	schedule;
+	uint32_t 	priority;
+	uint32_t	autoStart;	
+	eTaskState 	state;
+	void 		(*task)(void);
+	uint32_t* 		returnAddress;
+	uint32_t 	stack[TASK_STACK_SIZE];
+	uint32_t* 	sp;
 }sTaskInfo;
 
 
