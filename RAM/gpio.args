@@ -3,6 +3,7 @@
 "./Project_Settings/Startup_Code/__arm_end.o"
 "./Sources/scheduler.o"
 "./Sources/gpio_k60.o"
+"./Sources/service/queue.o"
 "./common/uif.o"
 "./common/stdlib.o"
 "./common/printf.o"
@@ -22,13 +23,13 @@
 -mfloat-abi=soft
 -g3
 -gdwarf-2
--T"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/Project_Settings/Linker_Files/PK60N512_ram.ld"
+-T"C:/Users/uidj2420/Documents/GitHub/osek/Project_Settings/Linker_Files/PK60N512_ram.ld"
 -nostartfiles
 -nodefaultlibs
 -nostdlib
 -Xlinker
 --gc-sections
--L"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/lib/armv7e-m"
+-L"C:/Freescale/CW MCU v10.6.4/MCU/ARM_GCC_Support/ewl/lib/armv7e-m"
 -Xlinker
 --undefined=__pformatter_
 -Xlinker

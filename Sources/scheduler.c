@@ -9,17 +9,39 @@
 #include "service/queue.h"
 
 /* Get the next task ID */
-static taskId getNextTaskId();
+static uint32_t getNextTaskId();
 
 /* Schedule policy function */
 static void scheduler(void);
 
-sTaskInfo* schedulerTaskInfo[3] = {NULL};
-sTaskInfo* currTaskInfo = NULL;
-taskId globalId = INVALID_TASK_ID;
-//Queue* queue = NULL;
+/* Init task task function */
+static void initTaskStack(uint32_t);
 
-register int r14 asm ("r14");
+static void linkRegister(void);
+
+sTaskInfo_t* schedulerTaskInfo[4] = { NULL };
+
+uint32_t runningTask;
+uint32_t nextRunningTask;
+
+void PendSV_Handler();
+
+void SVC_Handler();
+
+static uint32_t get_IPSR(void);
+
+/* Function to switch context */
+static void switchContext(void);
+
+static inline void * rd_stack_ptr(void);
+static inline void save_context(void);
+static inline void load_context(void);
+static inline void * rd_thread_stack_ptr(void);
+static inline void wr_thread_stack_ptr(void * ptr);
+
+//register int r7 asm ("r7");
+
+uint32_t* mainStack = NULL;
 
 /***********************************************************************  
  If there is a task in RUNNING state, save the return address in its 
@@ -27,154 +49,226 @@ register int r14 asm ("r14");
  task
  **********************************************************************/
 
-eErrorID OS_activateTask(taskId taskId)
+eErrorID OS_activateTask(uint32_t taskId)
 {
-	uint8_t i;
 	eErrorID status = ERROR;
 	//@TODO: What if the user activates the same task???
 	/* Check if the id is valid */
-	if(taskId >= 0 && taskId < NUMBER_OF_TASKS)
+	if (taskId >= 0 && taskId < NUMBER_OF_TASKS)
 	{
-		for(i = 0; i < NUMBER_OF_TASKS; i++)
-		{
-			/* Check if there is a task running */
-			if(schedulerTaskInfo[i]->state == RUNNING)
-			{
-				schedulerTaskInfo[i]->returnAddress = r14;
-				schedulerTaskInfo[i]->state = READY;
-				break;
-			}
-		}
 		schedulerTaskInfo[taskId]->state = READY;
 		status = SUCCESSFUL;
 	}
-	scheduler();
+	Schedule();
 	return status;
 }
 
 eErrorID OS_terminateTask()
 {
-	int i;
 	eErrorID status = ERROR;
 	//@TODO: Clean up stacks
-	for(i = 0; i < NUMBER_OF_TASKS; i++)
-	{
-		if(schedulerTaskInfo[i]->state == RUNNING)
-		{
-			schedulerTaskInfo[i]->state = SUSPENDED;
-			schedulerTaskInfo[i]->returnAddress = NULL;
-			status = SUCCESSFUL;
-			break;
-		}
-	}
-	scheduler();
+	schedulerTaskInfo[runningTask]->state = SUSPENDED;
+	Schedule();
 	return status;
 }
 
-eErrorID OS_chainTask(taskId taskId)
+eErrorID OS_chainTask(uint32_t taskId) 
 {
-	int i;
 	eErrorID status = ERROR;
-	for(i = 0; i < NUMBER_OF_TASKS; i++)
+	schedulerTaskInfo[runningTask]->state = SUSPENDED;
+	/* Verify if the taskId is valid */
+	if (taskId >= 0 && taskId < NUMBER_OF_TASKS)
 	{
-		if(schedulerTaskInfo[i]->id == taskId)
-		{
-			schedulerTaskInfo[i]->state = READY;
-			status = SUCCESSFUL;
-			break;
-		}
+		schedulerTaskInfo[taskId]->state = READY;
+		status = SUCCESSFUL;
 	}
+	Schedule();
 	return status;
 }
 
-eErrorID OS_createTask(sTaskInfo* taskInfo)
+eErrorID OS_createTask(sTaskInfo_t* taskInfo) 
 {
-	switch(taskInfo->id)
-	{
-	case 0: schedulerTaskInfo[0] = taskInfo; 
-	schedulerTaskInfo[0]->sp = &schedulerTaskInfo[0]->stack[TASK_STACK_SIZE-2];
-	schedulerTaskInfo[0]->stack[TASK_STACK_SIZE-1] = schedulerTaskInfo[0]->returnAddress;
-	break;
-	case 1: schedulerTaskInfo[1] = taskInfo; 
-	schedulerTaskInfo[1]->sp = &schedulerTaskInfo[1]->stack[TASK_STACK_SIZE-2];
-	schedulerTaskInfo[1]->stack[TASK_STACK_SIZE-1] = schedulerTaskInfo[1]->returnAddress;
-	break;
-	case 2: schedulerTaskInfo[2] = taskInfo; 
-	schedulerTaskInfo[2]->sp = &schedulerTaskInfo[2]->stack[TASK_STACK_SIZE-2];
-	schedulerTaskInfo[2]->stack[TASK_STACK_SIZE-1] = schedulerTaskInfo[2]->returnAddress;
-	break;
-	default: printf("Task not defined");
+	switch (taskInfo->id) {
+	case 0:
+		schedulerTaskInfo[0] = taskInfo;
+		initTaskStack(schedulerTaskInfo[0]->id);
+		break;
+	case 1:
+		schedulerTaskInfo[1] = taskInfo;
+		initTaskStack(schedulerTaskInfo[1]->id);
+		break;
+	case 2:
+		schedulerTaskInfo[2] = taskInfo;
+		initTaskStack(schedulerTaskInfo[2]->id);
+		break;
+	case 3:
+		schedulerTaskInfo[3] = taskInfo;
+		initTaskStack(schedulerTaskInfo[3]->id);
+		break;
+	default:
+		printf("Task not defined");
 	}
 	return ERROR;
 }
 
 eErrorID OS_startOS()
 {
-#if 0
-	uint8_t id = 0xEE;
-	uint8_t i = NUMBER_OF_TASKS;
-
+	uint32_t i = NUMBER_OF_TASKS - 1;
 	/* Auto start initialization */
 	do
 	{
-		/* We have a autostart task */
 		if(schedulerTaskInfo[i]->autoStart == 1)
 		{
-			id = schedulerTaskInfo[i]->id;
-			OS_activateTask(id);
-			break;
+			schedulerTaskInfo[i]->state = READY;
 		}
-	}while(--i);
-	queue = createQueue(NUMBER_OF_TASKS);
-#endif
-	OS_activateTask(TASK_A_ID);
+	}while(i--);
+	/* Init in IDLE task */
+	runningTask = TASK_IDLE_ID;
+	Schedule();
 	return ERROR;
 }
 
 static void scheduler(void)
 {
-	globalId = 0xEE;
-
-	while(globalId == INVALID_TASK_ID)
+	nextRunningTask = getNextTaskId();
+	/* The set running will be set in when switching the context */
+	if(nextRunningTask != runningTask)
 	{
-		globalId = getNextTaskId();
+		SCB_ICSR |= (1 << 28);
 	}
-	//@TODO: Remove unnecessary ready verification
-	if(schedulerTaskInfo[globalId]->state == READY)
-	{
-		schedulerTaskInfo[globalId]->state = RUNNING;
-		asm("mov sp, %0" : : "r" (schedulerTaskInfo[globalId]->sp));
-		//schedulerTaskInfo[globalId]->sp = schedulerTaskInfo[globalId]->sp - 2;
-	}
+	//asm("mov sp, %0" : : "r" (schedulerTaskInfo[runningTask]->sp));
 }
 
-static taskId getNextTaskId()
+static uint32_t getNextTaskId() 
 {
-	taskId index = (taskId)INVALID_TASK_ID;
+	uint32_t index = TASK_IDLE_ID;
 	uint32_t topPriority = 0;
 	uint8_t i = 0;
 
-#if 0
-	/* If size is bigger than zero, means that we have at least one ready task */
-	if(queue->size >  0)
+	for (; i < NUMBER_OF_TASKS; i++) 
 	{
-		/* Get the index of the ready task with the greatest priority */
-		// @TODO: Implement logic for more than one ready task
-		i = (taskId)front(queue);
-		dequeue(queue);
-	}
-#endif
-	for(; i < NUMBER_OF_TASKS; i++)
-	{
-		if(schedulerTaskInfo[i]->state == READY)
+		if (schedulerTaskInfo[i]->state == READY) 
 		{
-			if(schedulerTaskInfo[i]->priority >= topPriority)
+			if (schedulerTaskInfo[i]->priority >= topPriority) 
 			{
 				topPriority = schedulerTaskInfo[i]->priority;
-				index = (taskId)i;
+				index = (uint32_t)i;
 			}
 		}
 	}
 	return index;
+}
+
+static void initTaskStack(uint32_t taskId) 
+{
+	uint32_t* stackBaseAddr;
+	sStackFrame_t* stackFrameTask = NULL;
+
+	/* Calculate the last address to write (base addrees) for the stack */
+	stackBaseAddr =	(uint32_t*) ((uint32_t) (&schedulerTaskInfo[taskId]->stack[0]) + sizeof(uint32_t)*(TASK_STACK_SIZE));
+
+	/* Calculate the address where the stack frame begins */
+	stackFrameTask = (sStackFrame_t*) (stackBaseAddr - sizeof(sStackFrame_t)/sizeof(uint32_t));
+
+	schedulerTaskInfo[taskId]->sp = (uint32_t*) stackFrameTask;
+	schedulerTaskInfo[taskId]->r7 = (uint32_t) stackBaseAddr;
+
+	/* Init stack frame with zeros */
+	memset(stackFrameTask, 0, sizeof(sStackFrame_t));
+
+	stackFrameTask->lr = linkRegister;
+	stackFrameTask->r0 = taskId;
+	stackFrameTask->pc = (uint32_t) schedulerTaskInfo[taskId]->task;
+	stackFrameTask->psr = 0x01000000;
+}
+
+static void linkRegister(void) 
+{
+	while (1);
+}
+
+void PendSV_Handler()
+{
+	asm volatile ("MRS %0, msp\n\t"
+				//"MOV r0, %0 \n\t"
+				: "=r" (mainStack) );
+	//mainStack = (uint32_t*)rd_stack_ptr();
+	switchContext();
+}
+
+static void switchContext(void)
+{
+	uint32_t* r7backup = mainStack - 1;
+
+	/* Check if there was a running task */
+	if(schedulerTaskInfo[runningTask]->state == RUNNING)
+	{
+		schedulerTaskInfo[runningTask]->state = READY;
+	}
+	if(*mainStack != MAIN_RETURN)
+	{
+		schedulerTaskInfo[runningTask]->r7 = *r7backup;
+		schedulerTaskInfo[runningTask]->sp = (uint32_t*)rd_thread_stack_ptr();
+	}
+	*mainStack = THREAD_RETURN;
+	runningTask = nextRunningTask;
+	//asm volatile ("MSR sp, %0\n\t" : : "r" (schedulerTaskInfo[nextRunningTask]->sp) );
+	*r7backup = schedulerTaskInfo[nextRunningTask]->r7;
+	//asm("mov pc, %0" : : "r" (schedulerTaskInfo[runningTask]->sp));
+	/* Set the new task in running */
+	schedulerTaskInfo[runningTask]->state = RUNNING;
+}
+
+static inline void* rd_stack_ptr(void)
+{
+	void * result=NULL;
+	asm volatile ("MRS %0, msp\n\t"
+			//"MOV r0, %0 \n\t"
+			: "=r" (result) );
+	return result;
+}
+
+//This saves the context on the PSP, the Cortex-M3 pushes the other registers using hardware
+static inline void save_context(void)
+{
+	uint32_t scratch;
+	asm volatile ("MRS %0, psp\n\t"
+			"STMDB %0!, {r4, r5, r6, r8, r9, r10, r11}\n\t"
+			"MSR psp, %0\n\t"  : "=r" (scratch) );
+}
+
+//This loads the context from the PSP, the Cortex-M3 loads the other registers using hardware
+static inline void load_context(void)
+{
+	uint32_t scratch;
+	asm volatile ("MRS %0, psp\n\t"
+			"LDMFD %0!, {r4, r5, r6, r8, r9, r10, r11}\n\t"
+			"MSR psp, %0\n\t"  : "=r" (scratch) );
+}
+
+//This reads the PSP so that it can be stored in the task table
+static inline void * rd_thread_stack_ptr(void)
+{
+	void* result = NULL;
+	asm volatile ("MRS %0, psp\n\t" : "=r" (result) );
+	return(result);
+}
+
+//This writes the PSP so that the task table stack pointer can be used again
+static inline void wr_thread_stack_ptr(void * ptr)
+{
+	asm volatile ("MSR msp, %0\n\t" : : "r" (ptr) );
+}
+
+static uint32_t get_IPSR(void)
+{
+	uint32_t result;
+	asm volatile ("MRS %0, ipsr" : "=r" (result) );
+	return(result);
+}
+
+void SVC_Handler()
+{
+	scheduler();
 }
 

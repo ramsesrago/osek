@@ -1,6 +1,6 @@
 <Analysispoints>
 	<Name>AnalysispointsManager</Name>
-	<ProjectPath>C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/SaAnalysispointsManager.apconfig</ProjectPath>
+	<ProjectPath>C:/Users/uidj2420/Documents/GitHub/osek/SaAnalysispointsManager.apconfig</ProjectPath>
 	<MaxNumberOfCores>1</MaxNumberOfCores>
 	<Comments>Analysispoints Manager</Comments>
 	<IgnoreAll>false</IgnoreAll>

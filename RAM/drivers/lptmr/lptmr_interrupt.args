@@ -4,18 +4,18 @@
 -g3
 -gdwarf-2
 -nostdinc
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/Project_Headers"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/Project_Settings/Startup_Code"
--I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include"
--I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/drivers/wdog"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/common"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/cpu"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/drivers/adc16"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/drivers/uart"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/cpu/headers"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/drivers/mcg"
--I"C:/Freescale/CW MCU v10.6/MCU/CodeWarrior_Examples/Kinetis_Examples/k60/gpio/platforms"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/Project_Headers"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/Project_Settings/Startup_Code"
+-I"C:/Freescale/CW MCU v10.6.4/MCU/ARM_GCC_Support/ewl/EWL_C/include"
+-I"C:/Freescale/CW MCU v10.6.4/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/drivers/wdog"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/common"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/cpu"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/drivers/adc16"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/drivers/uart"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/cpu/headers"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/drivers/mcg"
+-I"C:/Users/uidj2420/Documents/GitHub/osek/platforms"
 -O1
 -Wall
 -c

@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 19
+#Progress monitor hint: 20
 first : all
 -include ../makefile.init
 
@@ -21,6 +21,7 @@ RM := "$(GNU_Make_Install_DirEnv)/rm" -rf
 -include drivers/adc16/subdir.mk
 -include cpu/subdir.mk
 -include common/subdir.mk
+-include Sources/service/subdir.mk
 -include Sources/subdir.mk
 -include Project_Settings/Startup_Code/subdir.mk
 -include objects.mk
@@ -65,7 +66,7 @@ all: warning-messages explicit-dependencies gpio.elf secondary-outputs
 # Tool invocations
 gpio.elf: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/PK60N512_ram.ld
 	@echo 'Building target: $@'
-	@echo 'Executing target #20 $@'
+	@echo 'Executing target #21 $@'
 	@echo 'Invoking: ARM Ltd Windows GCC C Linker'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc"  $(USER_OBJS_QUOTED) $(LIBS_QUOTED) @"gpio.args" -o"gpio.elf"
 	@echo 'Finished building target: $@'

@@ -21,6 +21,8 @@ extern void porta_isr(void);
 extern void portc_isr(void);
 extern void porte_isr(void);
 extern void lptmr_isr(void);
+extern void ftm0_isr(void);
+//extern void systick_isr(void);
 
 void __init_hardware()
 {
@@ -46,10 +48,10 @@ void HardFault_Handler() __attribute__ ((weak, alias("isr_default")));
 void MemManage_Handler() __attribute__ ((weak, alias("isr_default")));
 void BusFault_Handler() __attribute__ ((weak, alias("isr_default")));
 void UsageFault_Handler() __attribute__ ((weak, alias("isr_default")));
-void SVC_Handler() __attribute__ ((weak, alias("isr_default")));
+extern void SVC_Handler() __attribute__ ((weak, alias("isr_default")));
 void DebugMonitor_Handler() __attribute__ ((weak, alias("isr_default")));
-void PendSV_Handler() __attribute__ ((weak, alias("isr_default")));
-void SysTick_Handler() __attribute__ ((weak, alias("isr_default")));
+extern void PendSV_Handler() __attribute__ ((weak, alias("isr_default")));
+extern void SysTick_Handler() __attribute__ ((weak, alias("isr_default")));
 
 void isr_default(void)
 {
@@ -160,7 +162,7 @@ void (* const InterruptVector[])() __attribute__ ((section(".vectortable"))) = {
    (tIsrFunc)UNASSIGNED_ISR,                               /* 75 (0x0000012C) (prior: -) */
    (tIsrFunc)UNASSIGNED_ISR,                               /* 76 (0x00000130) (prior: -) */
    (tIsrFunc)UNASSIGNED_ISR,                               /* 77 (0x00000134) (prior: -) */
-   (tIsrFunc)UNASSIGNED_ISR,                               /* 78 (0x00000138) (prior: -) */
+   (tIsrFunc)ftm0_isr,                               /* 78 (0x00000138) (prior: -) */
    (tIsrFunc)UNASSIGNED_ISR,                               /* 79 (0x0000013C) (prior: -) */
    (tIsrFunc)UNASSIGNED_ISR,                               /* 80 (0x00000140) (prior: -) */
    (tIsrFunc)UNASSIGNED_ISR,                               /* 81 (0x00000144) (prior: -) */
